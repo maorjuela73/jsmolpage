@@ -102,10 +102,10 @@
     }
 
     files.push("H3.0.pdb")
-    console.log(files)
+    console.log("Van los files: ", files)
 
 
-    console.log(files)
+    console.log(files.reverse())
 
 
     var jsmolPath = ''; /*ADJUST TO YOUR PATH*/
@@ -155,8 +155,8 @@
       }
 
       localFiles.push("H3.0.pdb")
-      console.log(localFiles)
-
+      console.log("Estos son los localfiles ", localFiles)
+      localFiles = localFiles.reverse();
 
       console.log(this.data.distancia);
       console.log(this.localFiles)
