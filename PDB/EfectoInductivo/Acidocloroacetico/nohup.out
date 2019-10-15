@@ -1,0 +1,42 @@
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000005701, rsp 00007ffcd070e5f8, rbp 00007ffcd070eb70
+   rsi 000000000000000b, rdi 0000000000005701, r8  0000000000000020
+   r9  00002b2496c52f80, r10 00007ffcd070e3c0, r11 0000000000000202
+   r12 00007ffcd070ebb8, r13 0000000000000000, r14 0000000000000000
+   r15 00000000000003e6
+  /lib/x86_64-linux-gnu/libpthread.so.0(+0xf890) [0x2b2496613890]
+  /lib/x86_64-linux-gnu/libc.so.6(kill+0x7) [0x2b2496b57337]
+  /opt/g16/l101.exe() [0x493530]
+  /opt/g16/l101.exe() [0x4ab7e1]
+  /opt/g16/l101.exe() [0x4d2047]
+  /opt/g16/l101.exe() [0x4ba340]
+  /opt/g16/l101.exe() [0x4b9e2c]
+  /opt/g16/l101.exe() [0x505514]
+  /opt/g16/l101.exe() [0x40cba8]
+  /opt/g16/l101.exe() [0x4076e3]
+  /opt/g16/l101.exe() [0x404870]
+  /opt/g16/l101.exe() [0x4047ab]
+  /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x2b2496b43b45]
+  /opt/g16/l101.exe(sched_setaffinity+0xc1) [0x4046d9]
+Aborted
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 000000000000570a, rsp 00007ffe01640dc8, rbp 00007ffe01641340
+   rsi 000000000000000b, rdi 000000000000570a, r8  0000000000000020
+   r9  00002ac3c908bf80, r10 00007ffe01640b90, r11 0000000000000202
+   r12 00007ffe01641388, r13 0000000000000000, r14 0000000000000000
+   r15 00000000000003e6
+  /lib/x86_64-linux-gnu/libpthread.so.0(+0xf890) [0x2ac3c8a4c890]
+  /lib/x86_64-linux-gnu/libc.so.6(kill+0x7) [0x2ac3c8f90337]
+  /opt/g16/l101.exe() [0x493530]
+  /opt/g16/l101.exe() [0x4ab7e1]
+  /opt/g16/l101.exe() [0x4d2047]
+  /opt/g16/l101.exe() [0x4c588f]
+  /opt/g16/l101.exe() [0x50df8c]
+  /opt/g16/l101.exe() [0x4087e5]
+  /opt/g16/l101.exe() [0x404870]
+  /opt/g16/l101.exe() [0x4047ab]
+  /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x2ac3c8f7cb45]
+  /opt/g16/l101.exe(sched_setaffinity+0xc1) [0x4046d9]
+Aborted

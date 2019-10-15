@@ -1,0 +1,62 @@
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000000e2a, rsp 00007ffeb97f2c68, rbp 00007ffeb97f31e0
+   rsi 000000000000000b, rdi 0000000000000e2a, r8  0000000000000020
+   r9  00002af04c9cff80, r10 00007ffeb97f2a30, r11 0000000000000202
+   r12 00007ffeb97f3228, r13 0000000000000000, r14 0000000000000000
+   r15 00000000000003e6
+  /lib/x86_64-linux-gnu/libpthread.so.0(+0xf890) [0x2af04c390890]
+  /lib/x86_64-linux-gnu/libc.so.6(kill+0x7) [0x2af04c8d4337]
+  /opt/g16/l301.exe() [0x628730]
+  /opt/g16/l301.exe() [0x647551]
+  /opt/g16/l301.exe() [0x6c0ed7]
+  /opt/g16/l301.exe() [0x67388f]
+  /opt/g16/l301.exe() [0x4b1786]
+  /opt/g16/l301.exe() [0x44fc97]
+  /opt/g16/l301.exe() [0x414980]
+  /opt/g16/l301.exe() [0x4072a7]
+  /opt/g16/l301.exe() [0x404870]
+  /opt/g16/l301.exe() [0x4047ab]
+  /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x2af04c8c0b45]
+  /opt/g16/l301.exe(sched_setaffinity+0xc1) [0x4046d9]
+Aborted
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000000e41, rsp 00007ffff631c408, rbp 00007ffff631c980
+   rsi 000000000000000b, rdi 0000000000000e41, r8  0000000000000020
+   r9  00002b57298b0f80, r10 00007ffff631c1d0, r11 0000000000000202
+   r12 00007ffff631c9c8, r13 0000000000000000, r14 0000000000000000
+   r15 00000000000003e6
+  /lib/x86_64-linux-gnu/libpthread.so.0(+0xf890) [0x2b5729271890]
+  /lib/x86_64-linux-gnu/libc.so.6(kill+0x7) [0x2b57297b5337]
+  /opt/g16/l301.exe() [0x628730]
+  /opt/g16/l301.exe() [0x647551]
+  /opt/g16/l301.exe() [0x6c0ed7]
+  /opt/g16/l301.exe() [0x67388f]
+  /opt/g16/l301.exe() [0x48377c]
+  /opt/g16/l301.exe() [0x451b42]
+  /opt/g16/l301.exe() [0x451026]
+  /opt/g16/l301.exe() [0x407016]
+  /opt/g16/l301.exe() [0x404870]
+  /opt/g16/l301.exe() [0x4047ab]
+  /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x2b57297a1b45]
+  /opt/g16/l301.exe(sched_setaffinity+0xc1) [0x4046d9]
+Aborted
+Error: segmentation violation
+   rax 0000000000000000, rbx ffffffffffffffff, rcx ffffffffffffffff
+   rdx 0000000000000e50, rsp 00007fff26f14b28, rbp 00007fff26f150a0
+   rsi 000000000000000b, rdi 0000000000000e50, r8  0000000000000020
+   r9  00002ae110e5af80, r10 00007fff26f148f0, r11 0000000000000206
+   r12 00007fff26f150e8, r13 0000000000000000, r14 0000000000000000
+   r15 00000000000003e6
+  /lib/x86_64-linux-gnu/libpthread.so.0(+0xf890) [0x2ae11081b890]
+  /lib/x86_64-linux-gnu/libc.so.6(kill+0x7) [0x2ae110d5f337]
+  /opt/g16/l301.exe() [0x628730]
+  /opt/g16/l301.exe() [0x647551]
+  /opt/g16/l301.exe() [0x6c0ed7]
+  /opt/g16/l301.exe() [0x409081]
+  /opt/g16/l301.exe() [0x404870]
+  /opt/g16/l301.exe() [0x4047ab]
+  /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x2ae110d4bb45]
+  /opt/g16/l301.exe(sched_setaffinity+0xc1) [0x4046d9]
+Aborted

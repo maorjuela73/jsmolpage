@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="JSmol.min.js" type="text/javascript">/*ADJUST TO 
+YOUR PATH*/</script>
+<script type="text/javascript">
+window.onload = function() {
+	$(".interactionButtonStructure").click(function(){
+		// WRONG URL: var command = "load http://cancer3d.org/structuresChains/3DQWA.pdb; display *:A/1.1;";
+		var command = "load PDB/H2/H0.6.pdb; display *:A/1.1;";
+		Jmol.script(jsmolApplet0,command);
+	});
+}
+
+var jsmolPath = ''; /*ADJUST TO YOUR PATH*/
+var Info = {
+  j2sPath: jsmolPath + "j2s",
+  serverURL: jsmolPath + "php/jsmol.php", //THIS LINE IS ESSENTIAL FOR CROSS-SITE FILE LOADING
+	src: 'PDB/H2/H0.6.pdb'
+};	 
+console.log('Este',Info);
+</script>
+</head>
+
+<body>
+<p>text</p>
+<script type="text/javascript">
+Jmol.getApplet('jsmolApplet0', Info);
+</script>
+<p>
+<input type="button" value="load molecule" 
+class="interactionButtonStructure">
+</p>
+</body>
+</html>
