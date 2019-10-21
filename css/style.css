@@ -1,3 +1,26 @@
+.footer
+{
+	height: 110px;
+  background-color: black;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 10000;
+
+}
+
+.footer p
+{
+	color: white;
+}
+
+body {
+  background-color: ghostwhite;
+  height: 100%;
+}
+
 /* Created with Themestr.app */
 /*! `Custom` Bootstrap 4 theme */@import url(https://use.fontawesome.com/releases/v5.0.10/css/all.css);@import url(https://fonts.googleapis.com/css?family=Muli:200,300,400,700);/*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
