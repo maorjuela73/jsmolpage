@@ -1,0 +1,12 @@
+REMARK   1 File created by GaussView 5.0.8
+HETATM    1  C           0       0.223  -0.000  -0.000                       C
+HETATM    2  H           0       0.546  -0.894   0.518                       H
+HETATM    3  H           0       0.546   0.896   0.514                       H
+HETATM    4  H           0       0.546  -0.002  -1.033                       H
+HETATM    5  F           0       2.823   0.000   0.000                       F
+HETATM    6 Cl           0      -1.670   0.000   0.000                      Cl
+END
+CONECT    1    2    3    4
+CONECT    2    1
+CONECT    3    1
+CONECT    4    1

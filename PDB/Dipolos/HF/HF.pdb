@@ -1,0 +1,7 @@
+TITLE      HF
+REMARK   1 File created by GaussView 5.0.8
+HETATM    1  F           0       0.000   0.000   0.093                       F
+HETATM    2  H           0       0.000   0.000  -0.835                       H
+END
+CONECT    1    2
+CONECT    2    1
