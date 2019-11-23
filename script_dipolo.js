@@ -97,7 +97,7 @@ var jsmolPath = ''; /*ADJUST TO YOUR PATH*/
 var Info = {
   j2sPath: jsmolPath + "j2s",
   serverURL: jsmolPath + "php/jsmol.php", //THIS LINE IS ESSENTIAL FOR CROSS-SITE FILE LOADING
-  src: 'PDB/Ciclo/C2.5.log'
+  src: 'PDB/Dipolos/HF/HF.pdb'
 };
 
 let data_ethano;
@@ -203,7 +203,7 @@ var jsmolPath = ''; /*ADJUST TO YOUR PATH*/
 var Info_but = {
   j2sPath: jsmolPath + "j2s",
   serverURL: jsmolPath + "php/jsmol.php", //THIS LINE IS ESSENTIAL FOR CROSS-SITE FILE LOADING
-  src: 'PDB/SN2/SN1.2.pdb'
+  src: 'PDB/Dipolos/HCl/HCl.pdb'
 };
 
 let data_butano;
@@ -254,8 +254,109 @@ setTimeout(() => {
 }, 1000)
 
 
+// //////////////////////// INICIO DEL HBr /////////////////////////////////////////
 
 
+var Info_b = {
+  width: "100%",
+  height: "100%",
+  script: script,
+  use: "HTML5",
+  jarPath: "java",
+  j2sPath: "j2s",
+  jarFile: "JmolAppletSigned.jar",
+  isSigned: false,
+  addSelectionOptions: false,
+  serverURL: "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
+  readyFunction: null,
+  console: "jmol_infodiv",
+  disableInitialConsole: true,
+  defaultModel: null,
+  debug: false
+}
+
+
+Jmol.getApplet("appletCheck", Info_b, true);
+
+var isApplet = (appletCheck._jmolType.indexOf("_Applet") >= 0);
+console.log(isApplet);
+var is2D = appletCheck._is2D;
+
+if (!isApplet && !Info_b.script) {
+
+
+  Info_b.defaultModel = "$tylenol";
+  Info_b.script = "#alt:LOAD :tylenol";
+
+}
+
+
+$(document).ready(function () {
+
+  $("#middlepanel_HBr").html(Jmol.getAppletHtml("jmol_b", Info_b));
+  document.getElementById('jmol_canvas2d').style.width = '100%';
+  document.getElementById('jmol_canvas2d').style.height = '100%';
+  document.getElementById('middlepanel_HBr').setAttribute('class', 'text-center');
+  console.log('Robapollos' + document.getElementById('jmol_canvas2d').style.height);
+})
+
+
+
+var jsmolPath = ''; /*ADJUST TO YOUR PATH*/
+
+
+var Info_b = {
+  j2sPath: jsmolPath + "j2s",
+  serverURL: jsmolPath + "php/jsmol.php", //THIS LINE IS ESSENTIAL FOR CROSS-SITE FILE LOADING
+  src: 'PDB/Dipolos/HBr/HBr.pdb'
+};
+
+let data_b;
+
+let data_b_read = readTextFile("data_SN2.json", function (text) {
+  this.data_b = JSON.parse(text);
+});
+
+
+setTimeout(() => {
+  console.log('Aqui comienza el ethano')
+
+  let cont_et = 12;
+  let name_b = [];
+  for (let i =12; i < 24; i++) {
+    name_b.push("SN" + cont_et/10 + ".pdb")
+    cont_et += 1
+  }
+
+  // data_ethano = data_ethano.reverse();
+  console.log(this.data_b)
+
+
+
+  console.log(this.data_b[0].distancia);
+  console.log(this.data_b[0].energia);
+
+  // console.log(this.localFiles)
+
+
+  Plotly.newPlot('myDiv_HBr', data, layout);
+
+  myPlot.on('plotly_click', function (data) {
+    // this.Info.src = "PDB/H2/" + data.points[0].text
+
+    var jsmolPath = ''; /*ADJUST TO YOUR PATH*/
+    var Info_b = {
+      j2sPath: jsmolPath + "j2s",
+      serverURL: jsmolPath + "php/jsmol.php", //THIS LINE IS ESSENTIAL FOR CROSS-SITE FILE LOADING
+      src: "PDB/Dipolos/HBr/" + data.points[0].text
+    };
+
+    $("#middlepanel_HBr").html(Jmol.getAppletHtml("jmol_b", Info_b));
+
+    console.log("PDB/" + data.points[0].text)
+  });
+
+}, 1000)
 
 
 // ////////////////////////Segundo/////////////////////////////////////////
