@@ -132,6 +132,13 @@ if (!isApplet && !infoSn2.script) {
 
 $(document).ready(function () {
   $("#middlepanel_HCl").html(Jmol.getAppletHtml("jmolsn2", infoSn2));
+  var imghbr = document.createElement("img")
+  imghbr.setAttribute("src", "PDB/Dipolos/HCl/HCL.png") 
+  document.querySelector("#myDiv_HCl").appendChild(imghbr)
+  var imghbr = document.createElement("img")
+  imghbr.setAttribute("src", "PDB/Dipolos/HF/HF.png") 
+  document.querySelector("#myDiv").appendChild(imghbr)
+
 })
 
 var jsmolPath = ''; /*ADJUST TO YOUR PATH*/
@@ -181,6 +188,9 @@ console.log("Aqui comienza INFO2")
   
   $(document).ready(function () {
     $("#middlepanel_HBr").html(Jmol.getAppletHtml("jmolhbr", infoHbr));
+    var imghbr = document.createElement("img")
+    imghbr.setAttribute("src", "PDB/Dipolos/HBr/HBr.png") 
+    document.querySelector("#myDiv_HBr").appendChild(imghbr)
   })
   
   var jsmolPath = ''; /*ADJUST TO YOUR PATH*/
@@ -231,6 +241,10 @@ console.log("Aqui comienza INFO3")
   
   $(document).ready(function () {
     $("#middlepanel_HI").html(Jmol.getAppletHtml("jmolhi", infoHi));
+    var imghbr = document.createElement("img")
+    imghbr.setAttribute("src", "PDB/Dipolos/HI/HI.PNG") 
+    document.querySelector("#myDiv_hi").appendChild(imghbr)
+
   })
   
   var jsmolPath = ''; /*ADJUST TO YOUR PATH*/
