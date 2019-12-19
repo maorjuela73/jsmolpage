@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
   <script type="text/javascript" src="JSmol.min.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script type="text/javascript" src="script_reactividad.js">
+  <script type="text/javascript" src="script_efecto.js">
   </script>
 </head>
 
@@ -35,14 +35,14 @@
         <li class="nav-item">
           <a class="nav-link" href="webchem-dipolo2.html">Dipolos</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item ">
           <a class="nav-link" href="webchem-rotaciondeenlace.html">Rotaciones de enlace</a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="webchem-reactividadorganica.html">Reactividad orgánica</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="webchem-efecto.html">Efecto inductivo</a>
+          <a class="nav-link active" href="webchem-efecto.html">Efecto inductivo</a>
         </li>
       </ul>
 
@@ -63,22 +63,29 @@
   <div class="container">
     <div class="row mt-5">
       <div class="col">
-        <h1>Reactividad Orgánica</h1>
-        <p>En esta página se estudia la reactividad orgánica de reacciones sencillas en donde se puede observar el estado de transición, 
-          los productos y reactivos en la superficie de energía potencial
+        <h1>Efecto inductivo</h1>
+        <p>LLa acides en química orgánica tiene varios factores, entre ellos el efecto inductivo dado por el aumento de la polaridad de los átomos, en este ejemplo se observa el aumento de polaridad del ácido acético y 
+          como esto influye tanto en los mapas de potencial electrostático como en la acidez de este.
         </p>
       </div>
     </div>
 
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
-          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Ciclo</a>
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Ácido acetico</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">SN2</a>
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Ácido cloroacetico</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab1" data-toggle="tab" href="#profile1" role="tab" aria-controls="profile1" aria-selected="false">Ácido dicloroacetico</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab2" data-toggle="tab" href="#profile2" role="tab" aria-controls="profile2" aria-selected="false">Ácido tricloroacetico</a>
         </li>
       </ul>
       <div class="tab-content" id="myTabContent">
+
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="row d-flex justify-content-center">
                 <div class="col-md-6 col-sm-12">
@@ -88,7 +95,7 @@
                       Representación molecular
                     </div>
                     <div class="card-body">
-                      <div id="middlepanel"></div>
+                      <div id="middlepanel_HF"></div>
                       <p class="card-text">Usa el scroll para hacer zoom e la representación.</p>
                     </div>
                   </div>
@@ -98,17 +105,18 @@
           
                   <div class="card">
                     <div class="card-header">
-                      Superficie de energía potencial
+                      Mapa de potencial electrostatico
                     </div>
                     <div class="card-body">
                       <div id="myDiv" style="width: 450px; height: 300px;"></div>
-                      <p class="card-text">Haz click en el gráfico para cambiar la representación.</p>
+                      <!-- <p class="card-text">Haz click en el gráfico para cambiar la representación.</p> -->
                     </div>
                   </div>
           
                 </div>
               </div>
         </div>
+
         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
             <div class="row d-flex justify-content-center">
                 <div class="col-md-6 col-sm-12">
@@ -118,7 +126,7 @@
                       Representación molecular
                     </div>
                     <div class="card-body">
-                      <div id="middlepanel_but"></div>
+                      <div id="middlepanel_HCl"></div>
                       <p class="card-text">Usa el scroll para hacer zoom e la representación.</p>
                     </div>
                   </div>
@@ -128,20 +136,86 @@
           
                   <div class="card">
                     <div class="card-header">
-                      Superficie de energía potencial
+                      Mapa de potencial electrostatico
                     </div>
                     <div class="card-body">
-                      <div id="myDiv_but" style="width: 450px; height: 300px;"></div>
-                      <p class="card-text">Haz click en el gráfico para cambiar la representación.</p>
+                      <div id="myDiv_HCl" style="width: 450px; height: 300px;"></div>
+                      <!-- <p class="card-text">Haz click en el gráfico para cambiar la representación.</p> -->
                     </div>
                   </div>
           
                 </div>
-              </div> 
+              </div>
         </div>
+
+        <div class="tab-pane fade" id="profile1" role="tabpanel" aria-labelledby="profile-tab1">
+          <div class="row d-flex justify-content-center">
+              <div class="col-md-6 col-sm-12">
+        
+                <div class="card">
+                  <div class="card-header">
+                    Representación molecular
+                  </div>
+                  <div class="card-body">
+                    <div id="middlepanel_HBr"></div>
+                    <p class="card-text">Usa el scroll para hacer zoom e la representación.</p>
+                  </div>
+                </div>
+        
+              </div>
+              <div class="col-md-6 col-sm-12">
+        
+                <div class="card">
+                  <div class="card-header">
+                    Mapa de potencial electrostatico
+                  </div>
+                  <div class="card-body">
+                    <div id="myDiv_HBr" style="width: 450px; height: 300px;"></div>
+                    <!-- <p class="card-text">Haz click en el gráfico para cambiar la representación.</p> -->
+                  </div>
+                </div>
+        
+              </div>
+            </div>
+      </div>
+      
+      <div class="tab-pane fade" id="profile2" role="tabpanel" aria-labelledby="profile-tab2">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-6 col-sm-12">
+      
+              <div class="card">
+                <div class="card-header">
+                  Representación molecular
+                </div>
+                <div class="card-body">
+                  <div id="middlepanel_HI"></div>
+                  <p class="card-text">Usa el scroll para hacer zoom e la representación.</p>
+                </div>
+              </div>
+      
+            </div>
+            <div class="col-md-6 col-sm-12">
+      
+              <div class="card">
+                <div class="card-header">
+                  Mapa de potencial electrostatico
+                </div>
+                <div class="card-body">
+                  <div id="myDiv_hi" style="width: 450px; height: 300px;"></div>
+                  <!-- <p class="card-text">Haz click en el gráfico para cambiar la representación.</p> -->
+                </div>
+              </div>
+      
+            </div>
+          </div>
+    </div>
+        
       </div>
     
- 
+ <div class="espacio" >
+     <br>
+     <br>
+ </div>
 
     <div class="footer mt-5">
       <div class="row">

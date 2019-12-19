@@ -87,7 +87,7 @@ var jsmolPath = ''; /*ADJUST TO YOUR PATH*/
 var Info = {
   j2sPath: jsmolPath + "j2s",
   serverURL: jsmolPath + "php/jsmol.php", //THIS LINE IS ESSENTIAL FOR CROSS-SITE FILE LOADING
-  src: 'PDB/Dipolos/HF/HF.pdb'
+  src: 'PDB/EfectoInductivo/Acidoacetico/acidoacetico.pdb'
 };
 
 console.log("Aqui termina INFO")
@@ -133,10 +133,14 @@ if (!isApplet && !infoSn2.script) {
 $(document).ready(function () {
   $("#middlepanel_HCl").html(Jmol.getAppletHtml("jmolsn2", infoSn2));
   var imghbr = document.createElement("img")
-  imghbr.setAttribute("src", "PDB/Dipolos/HCl/HCL.png") 
+  imghbr.setAttribute("src", "PDB/EfectoInductivo/Acidocloroacetico/cloro.png") 
+  imghbr.width=300
+  imghbr.height=300
   document.querySelector("#myDiv_HCl").appendChild(imghbr)
   var imghbr = document.createElement("img")
-  imghbr.setAttribute("src", "PDB/Dipolos/HF/HF.png") 
+  imghbr.setAttribute("src", "PDB/EfectoInductivo/Acidoacetico/acetico.png") 
+  imghbr.width=300
+  imghbr.height=300
   document.querySelector("#myDiv").appendChild(imghbr)
 
 })
@@ -146,7 +150,7 @@ var jsmolPath = ''; /*ADJUST TO YOUR PATH*/
 var infoSn2 = {
   j2sPath: jsmolPath + "j2s",
   serverURL: jsmolPath + "php/jsmol.php", //THIS LINE IS ESSENTIAL FOR CROSS-SITE FILE LOADING
-  src: 'PDB/Dipolos/HCl/HCl.pdb'
+  src: 'PDB/EfectoInductivo/Acidocloroacetico/acidocloroacetico.pdb'
 };
 
 console.log("Aqui termina INFO1")
@@ -189,7 +193,9 @@ console.log("Aqui comienza INFO2")
   $(document).ready(function () {
     $("#middlepanel_HBr").html(Jmol.getAppletHtml("jmolhbr", infoHbr));
     var imghbr = document.createElement("img")
-    imghbr.setAttribute("src", "PDB/Dipolos/HBr/HBr.png") 
+    imghbr.setAttribute("src", "PDB/EfectoInductivo/Acidodicloroacetico/2cloro.png") 
+    imghbr.width=300
+    imghbr.height=300
     document.querySelector("#myDiv_HBr").appendChild(imghbr)
   })
   
@@ -198,7 +204,7 @@ console.log("Aqui comienza INFO2")
   var infoHbr = {
     j2sPath: jsmolPath + "j2s",
     serverURL: jsmolPath + "php/jsmol.php", //THIS LINE IS ESSENTIAL FOR CROSS-SITE FILE LOADING
-    src: 'PDB/Dipolos/HBr/HBr.log'
+    src: 'PDB/EfectoInductivo/Acidodicloroacetico/acidodicloroacetico.pdb'
   };
   
   console.log("Aqui termina INFO2")
@@ -242,7 +248,9 @@ console.log("Aqui comienza INFO3")
   $(document).ready(function () {
     $("#middlepanel_HI").html(Jmol.getAppletHtml("jmolhi", infoHi));
     var imghbr = document.createElement("img")
-    imghbr.setAttribute("src", "PDB/Dipolos/HI/HI.PNG") 
+    imghbr.setAttribute("src", "PDB/EfectoInductivo/Acidotricloroacetico/3cloro.png") 
+    imghbr.width=300
+    imghbr.height=300
     document.querySelector("#myDiv_hi").appendChild(imghbr)
 
   })
@@ -252,7 +260,7 @@ console.log("Aqui comienza INFO3")
   var infoHi = {
     j2sPath: jsmolPath + "j2s",
     serverURL: jsmolPath + "php/jsmol.php", //THIS LINE IS ESSENTIAL FOR CROSS-SITE FILE LOADING
-    src: 'PDB/Dipolos/HI/HI.log'
+    src: 'PDB/EfectoInductivo/Acidotricloroacetico/acidotricloroacetico.pdb'
   };
   
   console.log("Aqui termina INFO2")
